@@ -33,7 +33,7 @@ jobs:
 
             ${{ secrets.AZURE_ACR_ENDPOINT }}/${{ env.IMAGE_NAME_main }}:latest
             build-args:
-            FLASK_OUTPUT_DIR: /home
+            FLASK_OUTPUT_DIR:/home
   build-dev:
     name: Build-dev
     runs-on:
@@ -59,4 +59,4 @@ jobs:
 
             ${{ secrets.AZURE_ACR_ENDPOINT }}/${{ env.IMAGE_NAME_dev }}:latest
             build-args:
-            FLASK_OUTPUT_DIR: /home
+            FLASK_OUTPUT_DIR:/home
